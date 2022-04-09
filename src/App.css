@@ -1,46 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-image: url(../public/img/ui/background.jpg);
+    background-image: url(./Img/ui/background.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
 
 
-/* ------- Encabezado, foto y navbar -------*/
+/* ------- Encabezado, nombre y foto -------*/
 
-.header-container-b {
+.headerContainerBig {
+    width: 100vw;
     height: 18rem;
-    width: 100%;
     background-color: #565656;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#code-logo {
-    font-size: 1800%;
-    position: absolute;
+#codeLogo {
+    font-size: 18rem;
     color: #494949;
 }
 
-.header-container-s {
-    height: 5rem;
-    width: 100%;
-    background-color: #b5eecd;
-    transition: 200ms;
-}
-
-.opacity {
-    opacity: 1;
-}
-
-.name-container {
-    margin-left: 45%;
-    padding-top: 11rem;
-}
-
 .name {
-    font-size: 240%;
+    margin-right: 23vw;
+    margin-top: 10rem;
     font-family: 'Hubballi', cursive;
     color: #b5eecd;
     font-weight: bold;
+    font-size: 2.3rem;
 }
+
+.profileContainer {
+    width: 75%;
+    height: 14rem;
+    display: flex;
+    justify-content: center;
+    margin-top: -10.5rem;
+}
+
+.profile {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 100%;
+    padding: 0.7rem;
+    background-color: #b5eecd;
+}
+
+
+/* ------- Navbar -------*/
