@@ -39,6 +39,14 @@ body {
     padding: 0.2rem 0rem;
 }
 
+.separator {
+    background: #565656;
+    background: linear-gradient(90deg, #5656563e 0%, #565656 50%, #56565628 100%);
+    width: 65%;
+    height: 0.1rem;
+    margin-left: 17.5%;
+}
+
 
 /* ------- Encabezado, nombre y foto -------*/
 
@@ -188,4 +196,44 @@ body {
     overflow: hidden;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 6;
+}
+
+
+/* ------- Portfolio y proyectos -------*/
+
+.portfolioContainer {
+    width: 100%;
+    background-color: #e8ba86;
+}
+
+.portfolio {
+    padding: 4rem 2rem;
+}
+
+.portfolioTitle h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.projectsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5rem
+}
+
+.projects {
+    background-color: #565656;
+    width: 19rem;
+    height: 24rem;
+    border-radius: 10px;
+}
+
+.projectMargin {
+    margin: 0.5rem;
+}
+
+.projectsImgMain {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
