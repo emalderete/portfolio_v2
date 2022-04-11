@@ -1,3 +1,5 @@
+/* ------- valores globales -------*/
+
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
@@ -15,7 +17,7 @@ body {
 
 /* ------- Modificadores de comportamiento -------*/
 
-.opacity {
+.effectOpacity {
     opacity: 0;
 }
 
@@ -23,11 +25,25 @@ body {
     letter-spacing: -12px!important;
 }
 
+.links {
+    text-decoration: none;
+    font-family: 'League Spartan', sans-serif;
+    color: #f14c62;
+    transition: 200ms;
+}
+
+.links:hover {
+    color: #ace7eb;
+    background-color: #565656;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0rem;
+}
+
 
 /* ------- Encabezado, nombre y foto -------*/
 
 .headerContainerBig {
-    width: 100vw;
+    width: 100%;
     height: 18rem;
     background-color: #565656;
     display: flex;
@@ -129,5 +145,47 @@ body {
 .navActived {
     background-color: #f0c3a2;
     border-radius: 1rem;
-    padding: 1.2rem 1.5rem!important;
+    padding: 1.2rem 1.5rem;
+    margin: 0!important;
+}
+
+
+/* ------- MiniAbout / Acerda de... -------*/
+
+.miniAboutContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.miniAbout {
+    background-color: #565656;
+    width: 70%;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    margin: 10vh 0;
+}
+
+.miniAbout h2 {
+    width: 40%;
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+    color: #b5eecd;
+    font-size: 225%;
+}
+
+.miniAboutTextContainer {
+    width: 60%;
+    margin: 0 2rem;
+}
+
+.miniAboutText {
+    color: #e0e0e0;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 110%;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
 }

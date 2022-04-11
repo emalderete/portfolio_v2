@@ -12,16 +12,16 @@ const Navbar = () => {
 
     return (
         <div className='navbar'>
-            <div className='navbarBrand opacity'>
+            <div className='navbarBrand effectOpacity'>
                 <i className='fa-solid fa-code codeMinilogo'></i>
                 <h2 className='miniName effectSpacingLetter'>Emanuel Alderete</h2>
             </div>
             <ul className='navigation'> 
-                <li><a className="itemHome navActived" href="#home">Home</a></li>
-                <li><a className="itemPort" href="#portfolio">Portfolio</a></li>
-                <li><a className="itemSkill" href="#habilidades">Habilidades</a></li>
-                <li><a className="item" href="./about.html">Acerca de mi <i className="fa-solid fa-square-arrow-up-right"></i></a></li>
-                <li><a className="item" href="./about.html">Contacto <i className="fa-solid fa-square-arrow-up-right"></i></a></li>
+                <li className='navActived'><a className="itemHome" href="#home">Home</a></li>
+                <li className=''><a className="itemPort" href="#portfolio">Portfolio</a></li>
+                <li className=''><a className="itemSkill" href="#habilidades">Habilidades</a></li>
+                <li className=''><a className="item" href="./about.html">Acerca de mi <i className="fa-solid fa-square-arrow-up-right"></i></a></li>
+                <li className=''><a className="item" href="./about.html">Contacto <i className="fa-solid fa-square-arrow-up-right"></i></a></li>
             </ul>
         </div>
     );
