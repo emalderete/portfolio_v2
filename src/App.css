@@ -226,14 +226,50 @@ body {
     width: 19rem;
     height: 24rem;
     border-radius: 10px;
+    transition: 250ms;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.projectMargin {
+.projects:hover {
+    width: 19.5rem;
+    height: 24.5rem;
+    margin-top: -0.3rem;
+}
+
+.projectsMargin {
     margin: 0.5rem;
 }
 
 .projectsImgMain {
     width: 100%;
+    height: 10rem;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.projectsTextContainer {
+    color: #e0e0e0;
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projectsTitle {
+    margin: 1rem 0;
+    font-size: 130%;
+}
+
+.projectsText {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.projectsMoreInfoText {
+    color: #f14c62;
+    align-self: flex-end;
+    font-family: 'League Spartan', sans-serif;
+    margin: 0.5rem 0.5rem;
 }
