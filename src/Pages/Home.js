@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar';
 import Header from '../Components/Header';
 import MiniAbout from '../Components/MiniAbout';
 import Portfolio from '../Components/Portfolio';
+import Skills from '../Components/Skills';
 import '../App.css';
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
             <Navbar></Navbar>
             <MiniAbout></MiniAbout>
             <Portfolio></Portfolio>
+            <Skills></Skills>
         </section>
     );
 };

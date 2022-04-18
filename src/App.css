@@ -273,3 +273,83 @@ body {
     font-family: 'League Spartan', sans-serif;
     margin: 0.5rem 0.5rem;
 }
+
+
+/* ------- Habilidades -------*/
+
+.skillsContainerMargin {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.skillsContainer {
+    width: 90%;
+    background-color: #565656;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.skillsMainTitle {
+    text-align: center;
+    margin: 4rem 0 1rem 0;
+    color: #e0e0e0;
+}
+
+#skillsSeparator {
+    background: linear-gradient(90deg, #5656563e 0%, #b5eecd 50%, #56565628 100%);
+}
+
+.skillsMeterContainer {
+    margin: 3.5rem 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.skillsMeter {
+    width: 100%;
+    height: 17rem;
+    width: 17rem;
+}
+
+.skillsMeterOuter {
+    box-shadow: 5px 5px 10px #4a4a4a, -2px -2px 5px #6d6d6d;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skillsMeterInner {
+    border-radius: 100%;
+    box-shadow: inset 5px 5px 10px #4a4a4a, inset -2px -2px 12px #666363;
+    height: 12.5rem;
+    width: 12.5rem;
+}
+
+.progressColor {
+    position: absolute;
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 35px;
+    stroke-dashoffset: 2000;
+    stroke-dasharray: 2730;
+    animation: progressAnim 2000ms linear forwards;
+}
+
+.progressMeter {
+    position: absolute;
+    transform: rotateZ(-90deg);
+}
+
+@keyframes progressAnim {
+    0% {
+        stroke-dasharray: 2000;
+    }
+    100% {
+        stroke-dasharray: 2730;
+    }
+}
