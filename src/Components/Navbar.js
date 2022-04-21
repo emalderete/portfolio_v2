@@ -3,12 +3,12 @@ import '../App.css';
 
 const Navbar = () => {
 
-    useEffect(()=>{
-         window.addEventListener('scroll', ()=>{
-            const scroll = window.scrollY;
-            console.log(scroll); 
-         });
-    }, []);
+    // useEffect(()=>{
+    //      window.addEventListener('scroll', ()=>{
+    //         const scroll = window.scrollY;
+    //         console.log(scroll); 
+    //      });
+    // }, []);
 
     return (
         <div className='navbar'>

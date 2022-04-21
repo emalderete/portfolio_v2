@@ -48,6 +48,15 @@ body {
 }
 
 
+/* ------- Definición de animaciones -------*/
+
+@keyframes progressAnim {
+    0% {
+        stroke-dasharray: 2000;
+    }
+}
+
+
 /* ------- Encabezado, nombre y foto -------*/
 
 .headerContainerBig {
@@ -213,6 +222,8 @@ body {
 .portfolioTitle h2 {
     text-align: center;
     margin-bottom: 1rem;
+    font-size: 200%;
+    color: #373737;
 }
 
 .projectsContainer {
@@ -293,7 +304,8 @@ body {
 .skillsMainTitle {
     text-align: center;
     margin: 4rem 0 1rem 0;
-    color: #e0e0e0;
+    color: #b5eecd;
+    font-size: 200%;
 }
 
 #skillsSeparator {
@@ -311,6 +323,7 @@ body {
     width: 100%;
     height: 17rem;
     width: 17rem;
+    margin: 2rem 2rem;
 }
 
 .skillsMeterOuter {
@@ -328,6 +341,10 @@ body {
     box-shadow: inset 5px 5px 10px #4a4a4a, inset -2px -2px 12px #666363;
     height: 12.5rem;
     width: 12.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .progressColor {
@@ -337,7 +354,7 @@ body {
     stroke-width: 35px;
     stroke-dashoffset: 2000;
     stroke-dasharray: 2730;
-    animation: progressAnim 2000ms linear forwards;
+    animation: progressAnim 1700ms linear forwards;
 }
 
 .progressMeter {
@@ -345,11 +362,42 @@ body {
     transform: rotateZ(-90deg);
 }
 
-@keyframes progressAnim {
-    0% {
-        stroke-dasharray: 2000;
-    }
-    100% {
-        stroke-dasharray: 2730;
-    }
+.icons {
+    font-size: 500%;
+}
+
+.skillNameDisplayed {
+    font-size: 150%;
+    color: #b5eecd;
+    text-shadow: 1.5px 1.5px 4px #373737;
+}
+
+.percentageDisplayed {
+    font-size: 150%;
+    color: #b5eecd;
+    text-shadow: 1.5px 1.5px 4px #373737;
+}
+
+.fa-html5 {
+    color: #e45a3f;
+}
+
+.fa-css3 {
+    color: #01aeea;
+}
+
+.fa-js-square {
+    color: #ead41c;
+}
+
+.fa-bootstrap {
+    color: #7d11f0;
+}
+
+.fa-react {
+    color: #00d6fe;
+}
+
+.fa-node {
+    color: #63b649;
 }
