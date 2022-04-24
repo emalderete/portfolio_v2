@@ -292,7 +292,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 4rem;
+    margin: 5rem 0;
 }
 
 .skillsContainer {
@@ -400,4 +400,54 @@ body {
 
 .fa-node {
     color: #63b649;
+}
+
+
+/* ------- Footer -------*/
+
+.footerContainer {
+    background-color: #565656;
+}
+
+.footer {
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.credits {
+    color: #e0e0e0;
+    font-size: 80%;
+    margin: 0 4rem;
+}
+
+.social {
+    /* border: 1px solid black; */
+    width: 35%;
+}
+
+.social h4 {
+    color: #e0e0e0;
+    font-size: 130%;
+}
+
+.listSocial {
+    display: flex;
+    list-style: none;
+}
+
+.socialMedia {
+    /* border: 1px solid black; */
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.5rem 0.8rem 0 0;
+}
+
+.mediaIcon {
+    width: 100%;
+}
+
+.fa-github {
+    font-size: 250%;
 }

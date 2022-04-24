@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import '../App.css';
 
 const Skills = () => {
-    let counter = 0;
+    const refSkillsMeterContainer = useRef();
     const objectSkills = [
         {name : "HTML 5", icon : "fa-brands fa-html5 icons", value : 90},
         {name : "CSS 3", icon : "fa-brands fa-css3 icons", value : 72},
@@ -14,16 +14,14 @@ const Skills = () => {
 
     function calcPercentage(value) {
         return 730 / 100 * value;
-    }
-
-    
+    };
 
     return (
         <section className='skillsContainerMargin'>
             <article className='skillsContainer'>
                 <h2 className='skillsMainTitle'>Habilidades</h2>
                 <div className='separator' id='skillsSeparator'></div>
-                <div className='skillsMeterContainer'>
+                <div ref={refSkillsMeterContainer} className='skillsMeterContainer'>
                     {
                         objectSkills.map((skill, index)=>{
                             return(
@@ -45,7 +43,7 @@ const Skills = () => {
                                         </div>
                                     </div>
                                 </div>
-                            );
+                            )
                         })
                     }
                 </div>
