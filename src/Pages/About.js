@@ -1,35 +1,26 @@
-import React, { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import profile from '../Img/image/profile.jpg';
 
 function About(){
-
     const [ isActiveHome, setIsActiveHome ] = useState(false);
-    const [ isActiveAbout, setIsActiveAbout] = useState(false);
     const [ isActiveContact, setIsActiveContact ] = useState(false);
 
     const aboutStyles = {
         name : {color : '#f18593'},
         profile : { backgroundColor : '#f18593'},
         navbar : { backgroundColor : '#f18593'},
-        itemHover : { backgroundColor : '#565656'},
-        itemHoverLink : { color : '#e0e0e0'}
+        itemActive : { backgroundColor : '#565656'},
+        itemActiveLink : { color : '#e0e0e0'},
+        currentItemActive : { backgroundColor : '#565656', padding : '1.2rem 1.5rem', margin : '0'}
     };
 
     function mouseOverHandlerHome() {
         setIsActiveHome(true);
     };
 
-    function mouseOutHandlerHome(){
+    function mouseOutHandlerHome() {
         setIsActiveHome(false);
-    }
-
-    function mouseOverHandlerAbout() {
-        setIsActiveAbout(true);
-    }
-
-    function mouseOutHandlerAbout(){
-        setIsActiveAbout(false);
     }
 
     function mouseOverHandlerContact() {
@@ -42,7 +33,7 @@ function About(){
 
     return (
         <section>
-            {/* ------- Header y Navbar de la página de la página About --------  */}
+            {/* ------- Header y Navbar de la página About --------  */}
             <div>
                 <div className="headerContainerBig">
                     <i id="codeLogo" className="fa-solid fa-code"></i>
@@ -60,9 +51,15 @@ function About(){
                     <h2 className='miniName effectSpacingLetter'>Emanuel Alderete</h2>
                 </div>
                 <ul className='navigation'> 
-                    <li onMouseOver={mouseOverHandlerHome} onMouseOut={mouseOutHandlerHome} style={isActiveHome ? aboutStyles.itemHover : null} className=''><Link style={isActiveHome ? aboutStyles.itemHoverLink : null} to='/' className='itemHome'>Home <i className="fa-solid fa-square-arrow-up-right"></i></Link></li>
-                    <li onMouseOver={mouseOverHandlerAbout} onMouseOut={mouseOutHandlerAbout} style={isActiveAbout ? aboutStyles.itemHover : null} className=''><Link style={isActiveAbout ? aboutStyles.itemHoverLink : null} className="item" to='/about'>Acerca de mi</Link></li>
-                    <li onMouseOver={mouseOverHandlerContact} onMouseOut={mouseOutHandlerContact} style={isActiveContact ? aboutStyles.itemHover : null} className=''><Link style={isActiveContact ? aboutStyles.itemHoverLink : null} className="item" to='/contact'>Contacto <i className="fa-solid fa-square-arrow-up-right"></i></Link></li>
+                    <li onMouseOver={mouseOverHandlerHome} onMouseOut={mouseOutHandlerHome} style={isActiveHome ? aboutStyles.itemActive : null} className=''>
+                        <NavLink style={isActiveHome ? aboutStyles.itemActiveLink : null} to='/'>Home <i className="fa-solid fa-square-arrow-up-right"></i></NavLink>
+                    </li>
+                    <li style={aboutStyles.currentItemActive} className=''>
+                        <NavLink style={aboutStyles.itemActiveLink} to='/about'>Acerca de mi</NavLink>
+                    </li>
+                    <li onMouseOver={mouseOverHandlerContact} onMouseOut={mouseOutHandlerContact} style={isActiveContact ? aboutStyles.itemActive : null} className=''>
+                        <NavLink style={isActiveContact ? aboutStyles.itemActiveLink : null} to='/contact'>Contacto <i className="fa-solid fa-square-arrow-up-right"></i></NavLink>
+                    </li>
                 </ul>
             </div>
         </section>
