@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import profile from '../Img/image/profile.jpg';
+import Who from '../Components/AboutComponents/Who';
+import Studies from '../Components/AboutComponents/Studies';
+import ToOffer from '../Components/AboutComponents/ToOffer';
 
-function About(){
+const About = ()=>{
     const [ isActiveHome, setIsActiveHome ] = useState(false);
     const [ isActiveContact, setIsActiveContact ] = useState(false);
 
@@ -62,6 +65,10 @@ function About(){
                     </li>
                 </ul>
             </div>
+            {/* ------- Componentes de la página About --------  */}
+            <Who></Who>
+            <Studies></Studies>
+            <ToOffer></ToOffer>
         </section>
     );
 };

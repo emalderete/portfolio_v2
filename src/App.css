@@ -15,7 +15,7 @@ body {
 }
 
 
-/* ------- Modificadores de comportamiento -------*/
+/* ------- Efectos -------*/
 
 .effectOpacity {
     opacity: 0;
@@ -45,6 +45,11 @@ body {
     width: 65%;
     height: 0.1rem;
     margin-left: 17.5%;
+}
+
+.backgroundGradientDark {
+    background: #a3a3a3;
+    background: linear-gradient(90deg, #a3a3a300 0%, #a3a3a34b 29%, #717171d2 89%);
 }
 
 
@@ -449,4 +454,70 @@ body {
 .fa-github {
     font-size: 250%;
     color: #7c2ada;
+}
+
+
+/* ------- NUEVA PÁGINA: Aquí inician las reglas de estilos aplicadas a elementos de la página About -------*/
+
+
+/* ------- ¿Quien soy? -------*/
+
+.whoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0;
+}
+
+.who {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+.infoTitle {
+    width: 40%;
+    text-align: center;
+    font-family: 'lobster', cursive;
+    font-size: 250%;
+}
+
+.infoText {
+    width: 60%;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 120%;
+    line-height: 2rem;
+}
+
+.studiesContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0;
+}
+
+.studies {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+.toOfferContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0;
+}
+
+.toOffer {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+.toOfferList {
+    list-style: inside square;
 }
