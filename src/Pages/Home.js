@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from '../Components/Navbar';
 import Header from '../Components/Header';
+import Navbar from '../Components/Navbar';
 import MiniAbout from '../Components/MiniAbout';
 import Portfolio from '../Components/Portfolio';
 import Skills from '../Components/Skills';
