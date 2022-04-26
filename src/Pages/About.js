@@ -4,6 +4,9 @@ import profile from '../Img/image/profile.jpg';
 import Who from '../Components/AboutComponents/Who';
 import Studies from '../Components/AboutComponents/Studies';
 import ToOffer from '../Components/AboutComponents/ToOffer';
+import Different from '../Components/AboutComponents/Different';
+import Trust from '../Components/AboutComponents/Trust';
+import Footer from '../Components/Footer';
 
 const About = ()=>{
     const [ isActiveHome, setIsActiveHome ] = useState(false);
@@ -69,6 +72,9 @@ const About = ()=>{
             <Who></Who>
             <Studies></Studies>
             <ToOffer></ToOffer>
+            <Different></Different>
+            <Trust></Trust>
+            <Footer></Footer>
         </section>
     );
 };
