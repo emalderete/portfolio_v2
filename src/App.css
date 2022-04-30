@@ -14,8 +14,28 @@ body {
     background-attachment: fixed;
 }
 
+body::-webkit-scrollbar {
+    width: 0.8vw;
+    background: #565656;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #e0e0e0;
+    border-left: 2px solid #565656;
+    border-radius: 10px;
+}
+
 
 /* ------- Efectos -------*/
+
+.fixedTop {
+    position: fixed;
+    top: 0;
+}
+
+.displayNone {
+    display: none;
+}
 
 .effectOpacity {
     opacity: 0;
@@ -107,6 +127,10 @@ body {
 
 /* ------- Navbar -------*/
 
+.phantomContainer {
+    height: 5rem;
+}
+
 .navbar {
     height: 5rem;
     width: 100%;
@@ -115,11 +139,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 10;
 }
 
 .navbarBrand {
     display: flex;
     align-items: center;
+    transition: 200ms;
 }
 
 .codeMinilogo {
@@ -136,6 +162,7 @@ body {
     letter-spacing: 1px;
     font-weight: 800;
     font-size: 200%;
+    transition: 900ms;
 }
 
 .effect-spacing-letter {
