@@ -6,6 +6,7 @@ import ImgProject3Image1 from '../Img/image/project3-1.jpg';
 const Portfolio = () => {
     return (
         <section className='portfolioContainer'>
+            <a name='portfolio' href='#'></a>
             <article className='portfolio'>
                 <div className='portfolioTitle'>
                     <h2>Portfolio</h2>

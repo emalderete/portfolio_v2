@@ -17,7 +17,7 @@ const Navbar = () => {
             console.log(scroll);
             setTracker(scroll);
         };
-        
+
     }, []);
 
     return (
@@ -28,10 +28,11 @@ const Navbar = () => {
                     <i className='fa-solid fa-code codeMinilogo'></i>
                     <h2 className={tracker >= 288 ? 'miniName' : 'miniName effectSpacingLetter'}>Emanuel Alderete</h2>
                 </div>
+                {/* CREAR ANCLAS CON ETIQUETA A EN CADA CONTENEDOR PARA ELIMINAR LOS ONCLICKS */}
                 <ul className='navigation'> 
-                    <li className='navActived'><a className="itemHome" href="#home">Home</a></li>
-                    <li className=''><a className="itemPort" href="#portfolio">Portfolio</a></li>
-                    <li className=''><a className="itemSkill" href="#habilidades">Habilidades</a></li>
+                    <li className={tracker >= 0 && tracker <= 556 ? 'navActived' : null}><a className="itemHome" href="#home">Home</a></li>
+                    <li className={tracker >= 557 && tracker <= 1229 ? 'navActived' : null}><a className="itemPort" href="#portfolio">Portfolio</a></li>
+                    <li className={tracker >= 1230 ? 'navActived' : null}><a className="itemSkill" href="#skills">Habilidades</a></li>
                     <li className=''><Link className="item" to='/about'>Acerca de mi <i className="fa-solid fa-square-arrow-up-right"></i></Link></li>
                     <li className=''><Link className="item" to='/contact'>Contacto <i className="fa-solid fa-square-arrow-up-right"></i></Link></li>
                 </ul>

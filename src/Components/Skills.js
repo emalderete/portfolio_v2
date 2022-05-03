@@ -18,6 +18,7 @@ const Skills = () => {
 
     return (
         <section className='skillsContainerMargin'>
+            <a name='skills' href='#'></a>
             <article className='skillsContainer'>
                 <h2 className='skillsMainTitle'>Habilidades</h2>
                 <div className='separator' id='skillsSeparator'></div>
