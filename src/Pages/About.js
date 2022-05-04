@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import profile from '../Img/image/profile.jpg';
 import Who from '../Components/AboutComponents/Who';
@@ -11,11 +11,13 @@ import Footer from '../Components/Footer';
 const About = ()=>{
     const [ isActiveHome, setIsActiveHome ] = useState(false);
     const [ isActiveContact, setIsActiveContact ] = useState(false);
+    const [tracker, setTracker] = useState();
 
     const aboutStyles = {
         name : {color : '#f18593'},
         profile : { backgroundColor : '#f18593'},
         navbar : { backgroundColor : '#f18593'},
+        navbarResponsive : { backgroundColor : '#f18593', position : 'fixed', top : '0'},
         itemActive : { backgroundColor : '#565656'},
         itemActiveLink : { color : '#e0e0e0'},
         currentItemActive : { backgroundColor : '#565656', padding : '1.2rem 1.5rem', margin : '0'}
@@ -37,6 +39,13 @@ const About = ()=>{
         setIsActiveContact(false);
     }
 
+    useEffect(()=>{
+        window.addEventListener('scroll', ()=>{
+            const scroll = window.scrollY;
+            setTracker(scroll);
+        });
+    }, []);
+
     return (
         <section>
             {/* ------- Header y Navbar de la página About --------  */}
@@ -51,10 +60,11 @@ const About = ()=>{
                     <img style={aboutStyles.profile} className='profile' src={profile} alt=''></img>
                 </div>
             </div>
-            <div style={aboutStyles.navbar} className='navbar'>
-                <div className='navbarBrand effectOpacity'>
+            <div className={tracker >= 288 ? 'phantomContainer' : 'displayNone phantomContainer'}></div>
+            <div style={tracker >= 288 ? aboutStyles.navbarResponsive : aboutStyles.navbar} className='navbar'>
+                <div className={tracker >= 288 ? 'navbarBrand' : 'navbarBrand effectOpacity'}>
                     <i className='fa-solid fa-code codeMinilogo'></i>
-                    <h2 className='miniName effectSpacingLetter'>Emanuel Alderete</h2>
+                    <h2 style={{transition : '900ms'}} className={tracker >= 288 ? 'mininame' : 'miniName effectSpacingLetter'}>Emanuel Alderete</h2>
                 </div>
                 <ul className='navigation'> 
                     <li onMouseOver={mouseOverHandlerHome} onMouseOut={mouseOutHandlerHome} style={isActiveHome ? aboutStyles.itemActive : null} className=''>
