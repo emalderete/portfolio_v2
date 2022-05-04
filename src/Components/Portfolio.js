@@ -2,6 +2,7 @@ import React from 'react';
 import ImgProject1Image2 from '../Img/image/project1-2.jpg';
 import ImgProject2Image1 from '../Img/image/project2-1.jpg';
 import ImgProject3Image1 from '../Img/image/project3-1.jpg';
+import Modal from '../Components/Modal';
 
 const Portfolio = () => {
     return (
@@ -57,6 +58,7 @@ const Portfolio = () => {
                     </div>
                 </div>
             </article>
+            <Modal></Modal>
         </section>
     );
 };

@@ -20,7 +20,8 @@ const About = ()=>{
         navbarResponsive : { backgroundColor : '#f18593', position : 'fixed', top : '0'},
         itemActive : { backgroundColor : '#565656'},
         itemActiveLink : { color : '#e0e0e0'},
-        currentItemActive : { backgroundColor : '#565656', padding : '1.2rem 1.5rem', margin : '0'}
+        currentItemActive : { backgroundColor : '#565656', padding : '1.2rem 1.5rem', margin : '0'},
+        miniName : { fontFamily : 'Hubballi, cursive', letterSpacing : '1px', fontWeight : '800', fontSize : '200%', transition : '900ms'}
     };
 
     function mouseOverHandlerHome() {
@@ -64,7 +65,7 @@ const About = ()=>{
             <div style={tracker >= 288 ? aboutStyles.navbarResponsive : aboutStyles.navbar} className='navbar'>
                 <div className={tracker >= 288 ? 'navbarBrand' : 'navbarBrand effectOpacity'}>
                     <i className='fa-solid fa-code codeMinilogo'></i>
-                    <h2 style={{transition : '900ms'}} className={tracker >= 288 ? 'mininame' : 'miniName effectSpacingLetter'}>Emanuel Alderete</h2>
+                    <h2 style={aboutStyles.miniName} className={tracker >= 288 ? 'mininame' : 'miniName effectSpacingLetter'}>Emanuel Alderete</h2>
                 </div>
                 <ul className='navigation'> 
                     <li onMouseOver={mouseOverHandlerHome} onMouseOut={mouseOutHandlerHome} style={isActiveHome ? aboutStyles.itemActive : null} className=''>
