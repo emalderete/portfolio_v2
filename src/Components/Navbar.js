@@ -14,7 +14,6 @@ const Navbar = () => {
         
         function scrollTracker(){
             const scroll = window.scrollY;
-            console.log(scroll);
             setTracker(scroll);
         };
 
