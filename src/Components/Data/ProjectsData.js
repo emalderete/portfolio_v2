@@ -52,3 +52,40 @@ export var projects = [{
     linkGitAvailable : true,
     linkGit : 'https://github.com/emalderete/curriculum_vitae'
 }];
+
+ export class DataProject {
+    constructor(
+        data_name,
+        data_shortDesc,
+        data_fullDesc,
+        data_image1Available,
+        data_image2Available,
+        data_image3Available,
+        data_image4Available,
+        data_image1,
+        data_image2,
+        data_image3,
+        data_image4,
+        data_videoAvailable,
+        data_video,
+        data_linkPage,
+        data_linkGitAvailable,
+        data_linkGit) {
+        this.name = data_name;
+        this.shortDesc = data_shortDesc;
+        this.fullDesc = data_fullDesc;
+        this.image1Available = data_image1Available;
+        this.image2Available = data_image2Available;
+        this.image3Available = data_image3Available;
+        this.image4Available = data_image4Available;
+        this.image1 = data_image1;
+        this.image2 = data_image2;
+        this.image3 = data_image3;
+        this.image4 = data_image4;
+        this.videoAvailable = data_videoAvailable;
+        this.video = data_video;
+        this.linkPage = data_linkPage;
+        this.linkGitAvailable = data_linkGitAvailable;
+        this.linkGit = data_linkGit;
+    }
+ }
