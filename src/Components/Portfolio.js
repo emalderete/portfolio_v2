@@ -17,7 +17,7 @@ const Portfolio = () => {
     const [gitHover, setGitHover] = useState(false);
     var [modalState, setModalState] = useState(false);
     var [modalInfo, setModalInfo] = useState([]);
-    const modalStyles = {showModal : {opacity: '1', pointerEvents : 'all', transition : '160ms'}, closeModal : {opacity: '0', pointerEvents : 'none', transition : '200ms', transform : 'scale(1.2)'}}
+    const modalStyles = {showModal : {opacity: '1', pointerEvents : 'all', transition : '160ms'}, closeModal : {opacity: '0', pointerEvents : 'none', transition : '200ms', transform : 'scale(1.2)'}};
 
     function mouseOver(){
         setGitHover(true);
