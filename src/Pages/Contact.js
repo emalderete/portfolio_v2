@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import profile from '../Img/image/profile.jpg';
+import ConctactForm from '../Components/ContactComponents/ConctactForm';
 
 const Contact = () => {
     const [ isActiveHome, setIsActiveHome ] = useState(false);
     const [ isActiveAbout, setIsActiveAbout ] = useState(false);
     const [tracker, setTracker] = useState();
 
-    const aboutStyles = {
+    const contactStyles = {
         name : {color : '#84b6f4'},
         profile : { backgroundColor : '#84b6f4'},
         navbar : { backgroundColor : '#84b6f4'},
+        navButtons : {paddingRight : '1rem'},
         navbarResponsive : { backgroundColor : '#84b6f4', position : 'fixed', top : '0'},
         itemActive : { backgroundColor : '#565656'},
         itemActiveLink : { color : '#e0e0e0'},
@@ -47,31 +49,32 @@ const Contact = () => {
                 <div className="headerContainerBig">
                     <i id="codeLogo" className="fa-solid fa-code"></i>
                     <div className="nameContainer">
-                        <h1 style={aboutStyles.name} className='name'>¡Hola! Soy Emanuel Alderete.<br/>Desarrollador FullStack.</h1>
+                        <h1 style={contactStyles.name} className='name'>¡Hola! Soy Emanuel Alderete.<br/>Desarrollador FullStack.</h1>
                     </div>
                 </div>
                 <div className='profileContainer'>
-                    <img style={aboutStyles.profile} className='profile' src={profile} alt=''></img>
+                    <img style={contactStyles.profile} className='profile' src={profile} alt=''></img>
                 </div>
             </div>
             <div className={tracker >= 288 ? 'phantomContainer' : 'displayNone phantomContainer'}></div>
-            <div style={tracker >= 288 ? aboutStyles.navbarResponsive : aboutStyles.navbar} className='navbar'>
+            <div style={tracker >= 288 ? contactStyles.navbarResponsive : contactStyles.navbar} className='navbar'>
                 <div className={tracker >= 288 ? 'navbarBrand' : 'navbarBrand effectOpacity'}>
                     <i className='fa-solid fa-code codeMinilogo'></i>
-                    <h2 style={aboutStyles.miniName} className={tracker >= 288 ? 'mininame' : 'miniName effectSpacingLetter'}>Emanuel Alderete</h2>
+                    <h2 style={contactStyles.miniName} className={tracker >= 288 ? 'mininame' : 'miniName effectSpacingLetter'}>Emanuel Alderete</h2>
                 </div>
-                <ul className='navigation'> 
-                    <li onMouseOver={mouseOverHandlerHome} onMouseOut={mouseOutHandlerHome} style={isActiveHome ? aboutStyles.itemActive : null} className=''>
-                        <NavLink style={isActiveHome ? aboutStyles.itemActiveLink : null} to='/'>Home <i className="fa-solid fa-square-arrow-up-right"></i></NavLink>
+                <ul className='navigation' style={contactStyles.navButtons}> 
+                    <li onMouseOver={mouseOverHandlerHome} onMouseOut={mouseOutHandlerHome} style={isActiveHome ? contactStyles.itemActive : null} className=''>
+                        <NavLink style={isActiveHome ? contactStyles.itemActiveLink : null} to='/'>Home <i className="fa-solid fa-square-arrow-up-right"></i></NavLink>
                     </li>
-                    <li className='' onMouseOver={mouseOverHandlerAbout} onMouseOut={mouseOutHandlerAbout}>
-                        <NavLink style={isActiveAbout ? aboutStyles.itemActiveLink : null} to='/about'>Acerca de mi</NavLink>
+                    <li className='' onMouseOver={mouseOverHandlerAbout} onMouseOut={mouseOutHandlerAbout} style={isActiveAbout ? contactStyles.itemActive : null}>
+                        <NavLink style={isActiveAbout ? contactStyles.itemActiveLink : null} to='/about'>Acerca de mi <i className="fa-solid fa-square-arrow-up-right"></i></NavLink>
                     </li>
-                    <li style={aboutStyles.currentItemActive} className=''>
-                        <NavLink style={aboutStyles.itemActiveLink} to='/contact'>Contacto <i className="fa-solid fa-square-arrow-up-right"></i></NavLink>
+                    <li style={contactStyles.currentItemActive} className=''>
+                        <NavLink style={contactStyles.itemActiveLink} to='/contact'>Contacto</NavLink>
                     </li>
                 </ul>
             </div>
+            <ConctactForm></ConctactForm>
         </section>
     );
 };
