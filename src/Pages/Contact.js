@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import profile from '../Img/image/profile.jpg';
 import ConctactForm from '../Components/ContactComponents/ConctactForm';
+import Footer from '../Components/Footer';
 
 const Contact = () => {
-    const [ isActiveHome, setIsActiveHome ] = useState(false);
-    const [ isActiveAbout, setIsActiveAbout ] = useState(false);
+    const [isActiveHome, setIsActiveHome] = useState(false);
+    const [isActiveAbout, setIsActiveAbout] = useState(false);
     const [tracker, setTracker] = useState();
 
     const contactStyles = {
@@ -75,6 +76,7 @@ const Contact = () => {
                 </ul>
             </div>
             <ConctactForm></ConctactForm>
+            <Footer></Footer>
         </section>
     );
 };
