@@ -853,6 +853,41 @@ body::-webkit-scrollbar-thumb {
     height: 6rem;
 }
 
+.formButtonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.formButton {
+    width: 10rem;
+    height: 3rem;
+    font-size: 110%;
+    border-bottom-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border: none;
+    background-color: #84b6f4;
+    transition: 200ms;
+    position: relative;
+}
+
+.formButton:hover {
+    background-color: #4b97f5;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.paperPlane1 {
+    position: relative;
+}
+
+.paperPlane2 {
+    position: absolute;
+    transform: translate(15px, -20px);
+}
+
 .shapeBottom {
     background-color: #565656;
     margin-bottom: 3rem;

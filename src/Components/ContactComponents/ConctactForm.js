@@ -43,6 +43,9 @@ const ConctactForm = () => {
                             <span style={messageState ? formStyles.span : null} className='spanInput'>Escribe tu mensaje</span>
                             <textarea className='formInput formInputTextArea' typeof='text' name='message' id='message' required onFocus={()=>{setMessageState(true)}} onBlur={()=>{evaluateInputState('#message', setMessageState)}}/>
                         </label>
+                        <div className='formButtonContainer'>
+                            <button className='formButton'>Enviar <i className="fas fa-paper-plane paperPlane1"></i><i className="fas fa-paper-plane paperPlane2"></i></button>
+                        </div>
                     </form>
                 </article>
             <div className='shapeBottom'></div>
