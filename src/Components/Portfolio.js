@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { projects, DataProject } from './Data/ProjectsData';
 import '../App.css';
 
@@ -76,7 +76,7 @@ const Portfolio = () => {
 
     return (
         <section className='portfolioContainer'>
-            <a name='portfolio' href='#'></a>
+            <a className='' name='portfolio' href='/home'> </a>
             <article className='portfolio'>
                 <div className='portfolioTitle'>
                     <h2>Portfolio</h2>
@@ -85,7 +85,7 @@ const Portfolio = () => {
                 <div className='projectsContainer'>
                     {projects.map((project, index)=>{
                     return (
-                    <a key={index} onClick={()=>{showModal(project)}} style={{textDecoration : 'none'}}>
+                    <button key={index} onClick={()=>{showModal(project)}} style={{textDecoration : 'none'}}>
                         <div className='projects'>
                             <div className='projectsMargin'>
                                 <div className='projectsImgMainContainer'>
@@ -100,7 +100,7 @@ const Portfolio = () => {
                             </div>
                             <p className='projectsMoreInfoText'>Toca para más info...</p>
                         </div>
-                    </a>
+                    </button>
 
                     )})}
                 </div>

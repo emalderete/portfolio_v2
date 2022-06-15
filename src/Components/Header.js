@@ -8,7 +8,7 @@ const Header = () => {
 
     return (
         <section>
-            <a name='home' href='#'></a>
+            <a className='' name='home' href='/home'> </a>
             <div className="headerContainerBig">
                 <i id="codeLogo" className="fa-solid fa-code"></i>
                 <div className="nameContainer">
