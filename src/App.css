@@ -262,6 +262,12 @@ body::-webkit-scrollbar-thumb {
     color: #373737;
 }
 
+.contentProjectsCard {
+    border: none;
+    background-color: #00000000;
+    text-align: start;
+}
+
 .projectsContainer {
     display: flex;
     justify-content: space-evenly;

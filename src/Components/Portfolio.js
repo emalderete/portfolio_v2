@@ -85,7 +85,7 @@ const Portfolio = () => {
                 <div className='projectsContainer'>
                     {projects.map((project, index)=>{
                     return (
-                    <button key={index} onClick={()=>{showModal(project)}} style={{textDecoration : 'none'}}>
+                    <button className='contentProjectsCard' key={index} onClick={()=>{showModal(project)}} style={{textDecoration : 'none'}}>
                         <div className='projects'>
                             <div className='projectsMargin'>
                                 <div className='projectsImgMainContainer'>
