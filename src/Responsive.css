@@ -1,0 +1,68 @@
+/* ------- Diseño Adaptable: Altura de pantalla -------*/
+
+@media (min-height: 712px) {
+    .headerContainerBig {
+        height: 30vh!important;
+    }
+    #codeLogo {
+        font-size: 30vh;
+        color: #494949;
+    }
+}
+
+
+/* ------- Diseño Adaptable: Ancho de pantalla -------*/
+
+@media (max-width: 1200px) and (min-width: 1100px) {
+    .profileContainer {
+        width: 16vw;
+        height: 16vw;
+        margin-top: -14vw;
+        margin-left: 22vw;
+    }
+}
+
+@media (max-width: 1100px) and (min-width: 950px) {
+    .profileContainer {
+        width: 20vw;
+        height: 20vw;
+        margin-top: -16vw;
+        margin-left: 18vw;
+    }
+}
+
+@media (max-width: 950.5px) and (min-width: 776px) {
+    .profileContainer {
+        width: 24vw;
+        height: 24vw;
+        margin-top: -19vw;
+        margin-left: 12vw;
+    }
+}
+
+@media (max-width: 775.5px) and (min-width: 600px) {
+    .profileContainer {
+        width: 26vw;
+        height: 26vw;
+        margin-top: -21vw;
+        margin-left: 10vw;
+    }
+}
+
+@media (max-width: 600px) and (min-width: 512px) {
+    .profileContainer {
+        width: 32vw;
+        height: 32vw;
+        margin-top: -26vw;
+        margin-left: 10vw;
+    }
+}
+
+@media (max-width: 512px) {
+    .profileContainer {
+        width: 37vw;
+        height: 37vw;
+        margin-top: -30vw;
+        margin-left: 8vw;
+    }
+}
