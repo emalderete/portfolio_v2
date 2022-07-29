@@ -5,6 +5,7 @@ import About from './Pages/About';
 import Contact from './Pages/Contact';
 import Redirect from './Pages/Redirect';
 import './App.css';
+import './Responsive.css';
 
 function App() {
   return (

@@ -86,15 +86,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-/* ------- Diseño Adaptable -------*/
-
-@media (min-height: 1024px) {
-    .headerContainerBig {
-        height: 30vh!important;
-    }
-}
-
-
 /* ------- Encabezado, nombre y foto -------*/
 
 .headerContainerBig {
@@ -121,19 +112,20 @@ body::-webkit-scrollbar-thumb {
 }
 
 .profileContainer {
-    width: 42%;
-    height: 28vh;
+    width: 13vw;
+    height: 13vw;
     display: flex;
     justify-content: flex-end;
-    margin-top: -24vh;
+    margin-top: -11vw;
+    margin-left: 30vw;
     position: absolute;
 }
 
 .profile {
-    width: 28vh;
-    height: 28vh;
+    width: inherit;
+    height: inherit;
     border-radius: 100%;
-    padding: 1vh;
+    padding: 0.5vw;
     background-color: #b5eecd;
 }
 
@@ -145,7 +137,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .navbar {
-    height: 11vh;
+    height: 5rem;
     width: 100%;
     background-color: #b5eecd;
     transition: 200ms;
@@ -185,25 +177,25 @@ body::-webkit-scrollbar-thumb {
 .navigation {
     display: flex;
     list-style: none;
-    height: 8vh;
+    height: 3.5rem;
 }
 
 .navigation li {
     border-radius: 15px;
     transition: 300ms;
-    margin: 1.2rem 2.5rem;
+    margin: 1rem 2vw;
 }
 
 .navigation li:hover {
     background-color: #f0c3a2;
-    padding: 1.2rem 1.5rem;
+    padding: 1rem 0.919rem;
     margin: 0 1rem;
 }
 
 .navActived {
     background-color: #f0c3a2;
     border-radius: 1rem;
-    padding: 1.2rem 1.5rem;
+    padding: 1rem 0.919rem;
     margin: 0!important;
 }
 
@@ -438,7 +430,7 @@ body::-webkit-scrollbar-thumb {
     color: #01aeea;
 }
 
-.fa-js-square {
+.fa-square-js {
     color: #ead41c;
 }
 
